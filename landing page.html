@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StuTalk Club</title>
+  <link href="https://fonts.googleapis.com/css2?family=Canicule+Display&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: #1a1a1a;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      z-index: 1000;
+    }
+
+    nav img {
+      height: 40px;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 30px;
+    }
+
+    nav ul li {
+      position: relative;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+    }
+
+    nav ul li:hover ul {
+      display: block;
+    }
+
+    nav ul li ul {
+      display: none;
+      position: absolute;
+      background-color: #1a1a1a;
+      padding: 10px;
+      list-style: none;
+    }
+
+    nav ul li ul li {
+      padding: 5px 0;
+      font-size: 0.8rem;
+    }
+
+    section {
+      padding: 100px 20px;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.5s ease-in-out;
+    }
+
+    .light {
+      background: linear-gradient(to bottom right, #dff9fb, #7ed6df);
+    }
+
+    .dark {
+      background: linear-gradient(to bottom right, #1a1a2e, #6a0572);
+      color: white;
+    }
+
+    h1 {
+      font-family: 'Canicule Display', sans-serif;
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+
+    .event-container, .magazine-container, .previous-event-container {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .event-box, .magazine-box, .previous-event-box {
+      width: 300px;
+      height: 200px;
+      border-radius: 20px;
+      background-color: #ccc;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .magazine-box img, .event-box img, .previous-event-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    footer {
+      background-color: #1a1a1a;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 10px;
+    }
+
+    .social-icons a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.5rem;
+    }
+
+    p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      text-align: center;
+      max-width: 800px;
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <img src="images/stu talk logo.png" alt="StuTalk Logo">
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li>
+        <a href="#about">About</a>
+        <ul>
+          <li><a href="#about-stutalk">About StuTalk</a></li>
+        </ul>
+      </li>
+      <li><a href="#magazines">Our Magazines</a></li>
+      <li><a href="#previous-events">Previous Events</a></li>
+    </ul>
+  </nav>
+
+  <section id="home" class="light">
+    <h1>Upcoming Events</h1>
+    <div class="event-container">
+      <div class="event-box"><img src="images/p1.jpg" alt="Event 1"></div>
+      <div class="event-box"><img src="images/p2.jpg" alt="Event 2"></div>
+      <div class="event-box"><img src="images/p3.jpg" alt="Event 3"></div>
+    </div>
+  </section>
+
+  <section id="magazines" class="dark">
+    <h1>Our Magazines</h1>
+    <div class="magazine-container">
+      <div class="magazine-box"><img src="images/i1.jpg" alt="Magazine 1"></div>
+      <div class="magazine-box"><img src="images/i2.jpg" alt="Magazine 2"></div>
+      <div class="magazine-box"><img src="images/i3.jpg" alt="Magazine 3"></div>
+    </div>
+  </section>
+
+  <section id="previous-events" class="light">
+    <h1>Previously Held Events</h1>
+    <div class="previous-event-container">
+      <div class="previous-event-box"><img src="images/pe1.jpg" alt="Previous Event 1"></div>
+      <div class="previous-event-box"><img src="images/pe1.jpg" alt="Previous Event 2"></div>
+      <div class="previous-event-box"><img src="images/pe1.jpg" alt="Previous Event 3"></div>
+    </div>
+  </section>
+
+  <section id="about-stutalk" class="dark">
+    <h1>About StuTalk</h1>
+    <p>StuTalk is a vibrant club at VBIT dedicated to fostering student engagement, creativity, and leadership. Since its inception in 2007, StuTalk has provided a dynamic platform for students passionate about creative writing, design, and journalism.</p>
+    <p>Our club actively organizes events that inspire and empower students, while also publishing two annual editions: the Freshmen Edition and the Republic Day Edition, showcasing the diverse talents within our student community.</p>
+  </section>
+
+  <footer style="background-color: #b0b0b0; color: black;">
+    <div class="social-icons">
+        <a href="https://www.youtube.com/channel/UCqsr0kgZjZnxQPV9i8UcX1A" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/4/42/YouTube_icon_%282013-2017%29.png" alt="YouTube" style="width:30px;height:30px;">
+        </a>
+        <a href="https://www.instagram.com/vbit.stutalk/" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" style="width:30px;height:30px;">
+        </a>
+        <a href="https://www.linkedin.com/company/stutalk-vbit/" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn" style="width:30px;height:30px;">
+        </a>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelector('a[href="#previous-events"]').addEventListener('click', function (e) {
+      e.preventDefault();
+      document.querySelector('#previous-events').scrollIntoView({ behavior: 'smooth' });
+    });
+
+    document.querySelector('a[href="#about-stutalk"]').addEventListener('click', function (e) {
+      e.preventDefault();
+      document.querySelector('#about-stutalk').scrollIntoView({ behavior: 'smooth' });
+    });
+  </script>
+</body>
+
+</html>
